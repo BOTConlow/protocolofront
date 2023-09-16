@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
 import Like from '../../../../public/like.webp'
-import Love from '../../../../public/Love.webp'
 import { useEffect, useState } from 'react'
 import {
   Answer,
@@ -93,7 +92,11 @@ export default function CommentStruture({
             <p>{desc}</p>
             <Likes>
               <Image src={Like} alt="Like" quality={100} />
-              <Image src={Love} alt="Love" quality={100} />
+              <Image
+                src="https://i.imgur.com/gX0fFL0.png"
+                alt="Love"
+                quality={100}
+              />
               <span>{likes}</span>
             </Likes>
           </TextContainer>

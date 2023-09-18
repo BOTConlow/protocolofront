@@ -19,6 +19,7 @@ export const HeaderContent = styled('div', {
   backdropFilter: 'blur(8px)',
   boxShadow: '1px 0px 15px 5px #00000035',
   zIndex: 1000,
+  transition: '300ms ease',
 
   variants: {
     variant: {

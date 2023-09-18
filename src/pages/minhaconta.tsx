@@ -14,7 +14,7 @@ import axios from 'axios'
 import * as z from 'zod'
 import InputMask from 'react-input-mask'
 import Image from 'next/image'
-import Logo from '../../public/logo.png'
+import Logo from '../../public/logo.webp'
 
 const Vietnam = Montserrat({
   subsets: ['latin'],

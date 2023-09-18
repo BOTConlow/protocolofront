@@ -12,7 +12,7 @@ import { FormEvent, useState } from 'react'
 import axios from 'axios'
 import { Oxygen } from 'next/font/google'
 import Head from 'next/head'
-import Background from '../../public/background1.png'
+import Background from '../../public/background1.webp'
 import InputMask from 'react-input-mask'
 import * as z from 'zod'
 

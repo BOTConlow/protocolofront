@@ -58,6 +58,7 @@ export const ScndImg = styled('div', {
 
 export const TopBox = styled('div', {
   width: '75rem',
+  height: 'auto',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -76,7 +77,7 @@ export const TopBox = styled('div', {
   zIndex: 999,
 
   h4: {
-    color: '#3f423c',
+    color: '#000',
     textAlign: 'center',
 
     '@media (max-width: 768px)': {
@@ -84,11 +85,18 @@ export const TopBox = styled('div', {
     },
   },
 
+  button: {
+    '@media (max-width: 768px)': {
+      marginTop: '-8rem',
+    },
+  },
+
   '@media (max-width: 768px)': {
     width: '100%',
-    height: '37rem',
-    padding: '0 1rem',
+    height: 'auto',
+    padding: '2.5rem 1rem',
     marginTop: '2rem',
+    gap: '2rem',
   },
 })
 
@@ -181,6 +189,13 @@ export const DepoimentosContent = styled('div', {
 
   '@media (max-width: 768px)': {
     width: '100%',
+    padding: '2.5rem 1.5rem',
+  },
+
+  button: {
+    '@media (max-width: 768px)': {
+      fontSize: '.73rem',
+    },
   },
 })
 
@@ -222,7 +237,7 @@ export const BeneficiosContainer = styled('div', {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '4.5rem 0 2rem',
+  padding: '4.5rem 0 4.5rem',
 
   h1: {
     fontSize: '1.8rem',
@@ -247,7 +262,7 @@ export const BeneficiosContent = styled('div', {
   width: '680px',
   height: '680px',
   position: 'relative',
-  margin: '5rem auto',
+  margin: '5rem 0 2rem',
   backgroundImage: `url(${BgProduct.src})`,
   backgroundSize: 'cover',
 
@@ -331,6 +346,7 @@ export const BeneficiosBox = styled('div', {
 
   '@media (max-width: 768px)': {
     position: 'static',
+    maxWidth: '100%',
     padding: '1rem',
   },
 
@@ -378,6 +394,7 @@ export const GarantiaContent = styled('div', {
 
   '@media (max-width: 768px)': {
     width: '100%',
+    padding: '2rem 1.6rem',
   },
 
   img: {
@@ -400,7 +417,7 @@ export const GarantiaText = styled('div', {
   width: '35rem',
   display: 'flex',
   flexDirection: 'column',
-  gap: '1.2rem',
+  gap: '1.4rem',
   textAlign: 'center',
 
   '@media (max-width: 768px)': {
@@ -409,11 +426,20 @@ export const GarantiaText = styled('div', {
 
   h1: {
     fontSize: '1.8rem',
-    textDecoration: 'underline',
     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.30);',
 
     '@media (max-width: 768px)': {
       FontSize: '3.4rem',
+    },
+  },
+
+  button: {
+    fontSize: '1.3rem !important',
+    padding: '1rem 2rem',
+
+    '@media (max-width: 768px)': {
+      fontSize: '.9rem !important',
+      padding: '1rem 1rem',
     },
   },
 })

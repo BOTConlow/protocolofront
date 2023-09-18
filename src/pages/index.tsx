@@ -59,6 +59,7 @@ import Slider from 'react-slick'
 import Image from 'next/image'
 import Faq from '@/components/faq'
 import { ChatsCircle, Star } from 'phosphor-react'
+import BuyButton from '@/components/buyButton'
 
 const Vietnam = Montserrat({
   subsets: ['latin'],
@@ -197,6 +198,7 @@ export default function Home() {
               Assista este curto vídeo para entender como nossa acessoria
               jurídica pode te ajudar
             </h4>
+            <BuyButton title="CLIQUE AQUI PARA ACABAR COM AS ESPINHAS!" />
           </TopBox>
         </TopContainer>
         <Comentarios />
@@ -215,6 +217,17 @@ export default function Home() {
                 ))}
               </Slider>
             </DepoimentosImg>
+            <div
+              style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '1rem',
+              }}
+            >
+              <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
+            </div>
           </DepoimentosContent>
         </ColoredContainer>
         <BeneficiosContainer id="beneficiosSection">
@@ -280,6 +293,7 @@ export default function Home() {
             <Ball type={'thrd'} />
             <Image alt="iphone" src={Iphone} quality={100} />
           </BeneficiosContent>
+          <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
         </BeneficiosContainer>
         <BackgroundContainer>
           <BackgroundContent background={'first'} />
@@ -287,7 +301,10 @@ export default function Home() {
         <ColoredContainer>
           <GarantiaContent>
             <GarantiaText>
-              <h1>DESAFIO 17 DIAS COM O PPP</h1>
+              <h1>
+                <u>DESAFIO 17 DIAS</u>{' '}
+                <span style={{ color: '#bdd074' }}>COM O PPP</span>
+              </h1>
               <p>
                 Te desafiamos a testar nosso protocolo por 17 dias, e caso não
                 tenha resultados visíveis nesse período, devolvemos 100% do seu
@@ -303,6 +320,7 @@ export default function Home() {
                   TENTAR É ZERO!
                 </b>
               </p>
+              <BuyButton title="QUERO PARTICIPAR DO DESAFIO!" />
             </GarantiaText>
             <Image
               alt="selo garantia"
@@ -411,6 +429,7 @@ export default function Home() {
               </BonusText>
             </BonusBox>
           </BonusContent>
+          <BuyButton title="QUERO TER ACESSO A ESSE CONTEÚDO!" />
         </BonusContainer>
         <ColoredContainer>
           <VipContainer>

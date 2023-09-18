@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/info?token=${token}`,
+        `https://websiteback.onrender.com/info?token=${token}`,
       )
 
       const userData = response.data // Supondo que o backend retorna os dados do usuário autenticado

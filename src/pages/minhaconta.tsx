@@ -89,7 +89,7 @@ export default function Conta() {
       updateDTO.parse(updateForm)
 
       axios
-        .post('http://localhost:5000/update-user', {
+        .post('https://websiteback.onrender.com/update-user', {
           ...updateForm,
           pinto,
         })
@@ -135,7 +135,7 @@ export default function Conta() {
       }
 
       axios
-        .post('http://localhost:5000/update-password', {
+        .post('https://websiteback.onrender.com/update-password', {
           ...updatePasswordForm,
           pinto,
         })

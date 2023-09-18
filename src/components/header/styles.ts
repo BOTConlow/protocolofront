@@ -7,7 +7,7 @@ export const HeaderContainer = styled('header', {
   alignItems: 'center',
 })
 
-export const HeaderContent = styled('header', {
+export const HeaderContent = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -17,9 +17,19 @@ export const HeaderContent = styled('header', {
   justifyContent: 'space-around',
   alignItems: 'center',
   backdropFilter: 'blur(8px)',
-  background: 'transparent',
   boxShadow: '1px 0px 15px 5px #00000035',
   zIndex: 1000,
+
+  variants: {
+    variant: {
+      colored: {
+        background: '#bdd074', // Substitua por sua cor desejada
+      },
+      default: {
+        background: 'transparent', // Substitua por sua cor desejada
+      },
+    },
+  },
 })
 
 export const Atalhos = styled('div', {

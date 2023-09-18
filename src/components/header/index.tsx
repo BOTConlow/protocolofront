@@ -10,13 +10,17 @@ import {
 } from './styles'
 import Logo from '../../../public/logo.webp'
 import Avatar from '../../../public/avatar.webp'
-import { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect, useRef } from 'react'
 import { AuthContext } from '@/contexts/AuthContext'
 import { User } from 'phosphor-react'
 
 export default function Header() {
   const { user, signOut } = useContext(AuthContext)
   const [menu, setMenu] = useState(false)
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  // Adicione um estado para controlar a classe de fundo colorido
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   const abrirMenu = () => {
     setMenu(!menu)
@@ -27,9 +31,40 @@ export default function Header() {
     setMenu(false)
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef) return
+
+      if (!headerRef.current) return
+
+      const scrollY = window.scrollY
+      const scrollThreshold =
+        headerRef.current?.getBoundingClientRect().height + 850
+
+      if (scrollY > scrollThreshold) {
+        setHasScrolled(true)
+      } else {
+        setHasScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <HeaderContainer>
-      <HeaderContent>
+    <HeaderContainer ref={headerRef}>
+      <HeaderContent variant={hasScrolled ? 'colored' : 'default'}>
         <a href="/">
           <Image
             src={Logo}
@@ -41,10 +76,16 @@ export default function Header() {
           />
         </a>
         <Atalhos>
-          <button>HOME</button>
-          <button>CHAT ONLINE</button>
-          <button>DEPOIMENTOS</button>
-          <button>BENEFÍCIOS</button>
+          <button onClick={() => scrollToSection('homeSection')}>HOME</button>
+          <button onClick={() => scrollToSection('chatSection')}>
+            CHAT ONLINE
+          </button>
+          <button onClick={() => scrollToSection('depoimentosSection')}>
+            DEPOIMENTOS
+          </button>
+          <button onClick={() => scrollToSection('beneficiosSection')}>
+            BENEFÍCIOS
+          </button>
         </Atalhos>
 
         <Picture>

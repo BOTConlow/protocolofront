@@ -167,7 +167,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <MainContainer className={Vietnam.className}>
-        <TopContainer>
+        <TopContainer id="homeSection">
           <FirstImg />
           <ScndImg />
           <Header />
@@ -200,7 +200,7 @@ export default function Home() {
           </TopBox>
         </TopContainer>
         <Comentarios />
-        <ColoredContainer>
+        <ColoredContainer id="depoimentosSection">
           <DepoimentosContent>
             <DepoimentosText>
               <h3>VEJA VOCÊ MESMO</h3>
@@ -217,7 +217,7 @@ export default function Home() {
             </DepoimentosImg>
           </DepoimentosContent>
         </ColoredContainer>
-        <BeneficiosContainer>
+        <BeneficiosContainer id="beneficiosSection">
           <h1>
             CONHEÇA SEUS{' '}
             <span style={{ color: '#bdd074' }}>BENEFÍCIOS A PELE</span>

@@ -81,7 +81,7 @@ export function Comentarios() {
   }, [])
 
   return (
-    <ContainerComentario>
+    <ContainerComentario id="chatSection">
       <ContentComentario>
         <ComentarioTitle>
           <h1>

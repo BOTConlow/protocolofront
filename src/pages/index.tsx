@@ -27,6 +27,7 @@ import {
   BeneficiosBox,
   BeneficiosContainer,
   BeneficiosContent,
+  BeneficiosResponsive,
   BonusBox,
   BonusContainer,
   BonusContent,
@@ -96,6 +97,25 @@ export default function Home() {
       icon: 'icone2',
       title: 'INSPIRE OUTRAS PESSOAS',
       desc: 'Você pode postar seus resultados, pratos e como está se sentindo. Faça parte da nossa comunidade com mais de 8 mil pessoas com o mesmo objetivo que você: Alcançar a pele ideal dos nossos sonhos.',
+    },
+  ]
+
+  const beneficios = [
+    {
+      title: 'Pele Livre Das Acnes',
+      desc: 'Além de impressionante ação hidratante e revitalizadora, o PPP atua na desintoxicação do organismo das bactérias da acne diminuindo o aparecimento de espinhas e acnes.',
+    },
+    {
+      title: 'Mais vitalidade e jovialidade para a pele',
+      desc: 'As receitas do PPP contam com ingredientes ricos em vitamina D e o colágeno que promovem a reconstrução das celulas, retardando assim o envelhecimento da pele.',
+    },
+    {
+      title: 'Pele bonita e hidratada',
+      desc: 'Além de impressionante ação hidratante e revitalizadora, o PPP atua na desintoxicação do organismo das bactérias da acne.',
+    },
+    {
+      title: 'Mais vitalidade e jovialidade para a pele',
+      desc: 'Com a cuidadosa combinação dos ingredientes do PPP, manchas que ficam após as espinhas desaparecem em questão de semanas.',
     },
   ]
 
@@ -202,6 +222,19 @@ export default function Home() {
             CONHEÇA SEUS{' '}
             <span style={{ color: '#bdd074' }}>BENEFÍCIOS A PELE</span>
           </h1>
+
+          <BeneficiosResponsive>
+            <Slider {...settings}>
+              {beneficios.map((item) => (
+                <BeneficiosBox key={item.desc}>
+                  <Image alt="logo" src={Logo1} quality={100} />
+
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </BeneficiosBox>
+              ))}
+            </Slider>
+          </BeneficiosResponsive>
 
           <BeneficiosContent>
             <BeneficiosBox type={'first'}>

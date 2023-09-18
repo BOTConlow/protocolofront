@@ -236,6 +236,7 @@ export const BeneficiosContainer = styled('div', {
   '@media (max-width: 768px)': {
     maxWidth: '100%',
     padding: '3rem 1rem',
+    gap: '2rem',
   },
 })
 
@@ -252,17 +253,21 @@ export const BeneficiosContent = styled('div', {
 
   img: {
     zIndex: 999,
-    '@media (max-width: 768px)': {
-      display: 'none',
-    },
   },
 
   '@media (max-width: 768px)': {
-    width: '100%',
-    height: '28rem',
-    margin: '2rem auto',
-    flexDirection: 'column',
-    gap: '1rem',
+    display: 'none',
+  },
+})
+
+export const BeneficiosResponsive = styled('div', {
+  width: '100%',
+  height: '100%',
+
+  display: 'none',
+
+  '@media (max-width: 768px)': {
+    display: 'block',
   },
 })
 
@@ -321,6 +326,7 @@ export const BeneficiosBox = styled('div', {
 
   display: 'flex',
   flexDirection: 'column',
+
   gap: '0.6rem',
 
   '@media (max-width: 768px)': {
@@ -578,15 +584,15 @@ export const VipContent = styled('div', {
   boxShadow: '0px 0px 30px 0px rgba(0, 0, 0, .30)',
 
   '@media (max-width: 768px)': {
-    flexDirection: 'column',
+    flexDirection: 'column-reverse',
     maxWidth: '23rem',
     gap: '2rem',
   },
 
   img: {
     '@media (max-width: 768px)': {
-      width: '260px',
-      height: '162px',
+      width: '100%',
+      height: '100%',
     },
   },
 })

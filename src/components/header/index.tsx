@@ -8,7 +8,7 @@ import {
   MenuItem,
   Picture,
 } from './styles'
-import Logo from '../../../public/logo.png'
+import Logo from '../../../public/logo.webp'
 import Avatar from '../../../public/avatar.webp'
 import { useContext, useState } from 'react'
 import { AuthContext } from '@/contexts/AuthContext'

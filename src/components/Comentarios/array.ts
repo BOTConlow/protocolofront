@@ -15,9 +15,9 @@ import Perfil20 from '../../../public/perfil20.webp'
 import Perfil21 from '../../../public/perfil21.webp'
 import Perfil22 from '../../../public/perfil22.webp'
 import Perfil23 from '../../../public/perfil23.webp'
-import Perfil25 from '../../../public/perfil25.jpg'
-import Perfil26 from '../../../public/perfil26.jpg'
-import Perfil27 from '../../../public/perfil27.jpg'
+import Perfil25 from '../../../public/perfil25.webp'
+import Perfil26 from '../../../public/perfil26.webp'
+import Perfil27 from '../../../public/perfil27.webp'
 
 interface LocationProps {
   city: string

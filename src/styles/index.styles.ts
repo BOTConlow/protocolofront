@@ -1,10 +1,10 @@
 import { styled } from './stitches.config'
-import Back3 from '../../public/back3.jpg'
-import Back4 from '../../public/back4.jpg'
-import BgTop from '../../public/bgtop.png'
-import BgProduct from '../../public/bgproduct.png'
-import BallImg from '../../public/ball.png'
-import BallImg2 from '../../public/ball2.png'
+import Back3 from '../../public/back3.webp'
+import Back4 from '../../public/back4.webp'
+import BgTop from '../../public/bgtop.webp'
+import BgProduct from '../../public/bgproduct.webp'
+import BallImg from '../../public/ball.webp'
+import BallImg2 from '../../public/ball2.webp'
 import { keyframes } from '@stitches/react'
 
 export const MainContainer = styled('main', {

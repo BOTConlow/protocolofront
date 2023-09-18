@@ -16,7 +16,7 @@ import {
 } from './styles'
 
 import CommentStruture from './ComentarioStruture'
-import Avatar from '../../../public/avatar.png'
+import Avatar from '../../../public/avatar.webp'
 import { useEffect, useState, useContext, Fragment } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'

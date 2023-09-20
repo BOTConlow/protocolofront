@@ -26,7 +26,7 @@ export const TopContainer = styled('div', {
   background: '#bdd074',
 
   '@media (max-width: 768px)': {
-    height: '45rem',
+    height: '50rem',
   },
 })
 
@@ -122,7 +122,7 @@ export const Headline = styled('div', {
     borderRadius: '.2rem',
 
     '@media (max-width: 768px)': {
-      fontSize: '.8rem',
+      fontSize: '1rem',
       padding: '.6rem 1.2rem',
     },
   },
@@ -133,7 +133,7 @@ export const Headline = styled('div', {
     lineHeight: '140%',
 
     '@media (max-width: 768px)': {
-      fontSize: '1.11rem',
+      fontSize: '1.5rem',
     },
   },
 })
@@ -547,6 +547,7 @@ export const BonusContainer = styled('div', {
 
     '@media (max-width: 768px)': {
       fontSize: '1.7rem',
+      marginBottom: '0',
     },
   },
 })

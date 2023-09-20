@@ -76,16 +76,14 @@ export default function Header() {
           />
         </a>
         <Atalhos>
-          <button onClick={() => scrollToSection('homeSection')}>HOME</button>
-          <button onClick={() => scrollToSection('chatSection')}>
-            CHAT ONLINE
-          </button>
-          <button onClick={() => scrollToSection('depoimentosSection')}>
+          <h4 onClick={() => scrollToSection('homeSection')}>HOME</h4>
+          <h4 onClick={() => scrollToSection('chatSection')}>CHAT ONLINE</h4>
+          <h4 onClick={() => scrollToSection('depoimentosSection')}>
             DEPOIMENTOS
-          </button>
-          <button onClick={() => scrollToSection('beneficiosSection')}>
+          </h4>
+          <h4 onClick={() => scrollToSection('beneficiosSection')}>
             BENEFÍCIOS
-          </button>
+          </h4>
         </Atalhos>
 
         <Picture>

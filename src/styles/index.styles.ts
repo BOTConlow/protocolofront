@@ -26,7 +26,7 @@ export const TopContainer = styled('div', {
   background: '#bdd074',
 
   '@media (max-width: 768px)': {
-    height: '47rem',
+    height: '45rem',
   },
 })
 
@@ -65,7 +65,7 @@ export const TopBox = styled('div', {
   alignItems: 'center',
   marginTop: '2rem',
   gap: '3rem',
-  padding: '3rem',
+  padding: '3rem 2rem',
   color: 'white',
   background: '#ffffff35',
   backdropFilter: 'blur(15px)',
@@ -94,7 +94,7 @@ export const TopBox = styled('div', {
   '@media (max-width: 768px)': {
     width: '100%',
     height: 'auto',
-    padding: '2.5rem 1rem',
+    padding: '2.5rem .9rem',
     marginTop: '2rem',
     gap: '2rem',
   },
@@ -108,9 +108,13 @@ export const Headline = styled('div', {
   textAlign: 'center',
   gap: '2rem',
 
+  '@media (max-width: 768px)': {
+    gap: '1.5rem',
+  },
+
   p: {
     fontWeight: 'bold',
-    fontSize: '1.2rem',
+    fontSize: '1.3rem',
     letterSpacing: '0.3rem',
     background: 'linear-gradient(90deg, #2e4a20, #508038)',
     padding: '.6rem 1.8rem',
@@ -118,16 +122,18 @@ export const Headline = styled('div', {
     borderRadius: '.2rem',
 
     '@media (max-width: 768px)': {
-      fontSize: '1rem',
+      fontSize: '.8rem',
+      padding: '.6rem 1.2rem',
     },
   },
 
   h1: {
     fontSize: '2.2rem',
-    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.50);',
+    textShadow: '1px 1px 2px rgba(0, 0, 0, 0.65);',
+    lineHeight: '140%',
 
     '@media (max-width: 768px)': {
-      fontSize: '1.45rem',
+      fontSize: '1.11rem',
     },
   },
 })
@@ -568,6 +574,7 @@ export const BonusBox = styled('div', {
   '@media (max-width: 768px)': {
     width: '100%',
     flexDirection: 'column',
+    padding: '1.5rem 1rem',
   },
 
   '&:hover': {
@@ -576,8 +583,19 @@ export const BonusBox = styled('div', {
 })
 
 export const BonusText = styled('div', {
+  textAlign: 'left',
+
+  '@media (max-width: 768px)': {
+    textAlign: 'center',
+  },
+
   h3: {
-    marginBottom: '.5rem',
+    fontSize: '1.3rem',
+    marginBottom: '.6rem',
+
+    '@media (max-width: 768px)': {
+      fontSize: '1.4rem',
+    },
   },
 })
 

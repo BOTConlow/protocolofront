@@ -38,12 +38,16 @@ export const Atalhos = styled('div', {
   gap: '3rem',
   color: '#fff',
 
-  button: {
+  h4: {
     color: '#fff',
     fontSize: '1rem',
     fontWeight: 500,
     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.20)',
-    background: 'transparent',
+
+    '&:hover': {
+      cursor: 'pointer',
+      textDecoration: 'underline',
+    },
   },
 
   '@media (max-width: 768px)': {

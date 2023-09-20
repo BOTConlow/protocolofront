@@ -174,7 +174,7 @@ export default function Home() {
           <Header />
           <TopBox>
             <Headline>
-              <p>PEPTÍDEOS ANTI-ACNE</p>
+              <p>ASSISTA E DESCUBRA!</p>
               <h1>
                 <span
                   style={{
@@ -183,20 +183,20 @@ export default function Home() {
                 >
                   <u>O FIM DO ROACUTAN!</u>
                 </span>{' '}
-                Descubra a Revolução no Tratamento de Acne com o{' '}
+                Descubra a Revolução No Tratamento de Espinhas Com os Novos{' '}
                 <span
                   style={{
                     color: '#383b35 ',
                   }}
                 >
-                  <u>PROTOCOLO PELE PERFEITA</u>!
+                  <u>PEPTÍDEOS ANTI-ACNE</u>!
                 </span>
               </h1>
             </Headline>
             <Vsl />
             <h4>
-              Assista este curto vídeo para entender como nossa acessoria
-              jurídica pode te ajudar
+              Assista este curto vídeo para descobrir como acabar com as
+              espinhas em até 17 dias!
             </h4>
             <BuyButton title="CLIQUE AQUI PARA ACABAR COM AS ESPINHAS!" />
           </TopBox>
@@ -306,12 +306,12 @@ export default function Home() {
                 <span style={{ color: '#bdd074' }}>COM O PPP</span>
               </h1>
               <p>
-                Te desafiamos a testar nosso protocolo por 17 dias, e caso não
-                tenha resultados visíveis nesse período, devolvemos 100% do seu
-                dinheiro sem perguntas e sem burocracias!
+                <b>Te desafiamos</b> a testar nosso protocolo por 17 dias, e
+                caso não tenha resultados visíveis nesse período, devolvemos{' '}
+                <b>100% do seu dinheiro</b> sem perguntas e sem burocracias!
               </p>
               <p>
-                Além disso, temos um suporte 24 horas para te ajudar com
+                Além disso, temos um <b>suporte 24 horas</b> para te ajudar com
                 qualquer problema que possa surgir!
               </p>
               <p>
@@ -379,12 +379,15 @@ export default function Home() {
               <Image alt="bonus" src={Bonus1} quality={100} />
               <BonusText>
                 <h3>
-                  GUIA <span style={{ color: '#bdd074' }}>PELE SAUDÁVEL</span>
+                  <u>GUIA</u>{' '}
+                  <span style={{ color: '#bdd074' }}>
+                    <u>PELE SAUDÁVEL</u>
+                  </span>
                 </h3>
                 <p>
-                  Descubra os pequenos ajustes que devem ser feitos no dia a dia
-                  para ter uma alimentação anti-acne sem precisar abrir mão dos
-                  alimentos que você ama.
+                  Descubra os <b>pequenos ajustes</b> que devem ser feitos no
+                  dia a dia para ter uma alimentação anti-acne{' '}
+                  <b>sem precisar abrir mão</b> dos alimentos que você ama.
                 </p>
               </BonusText>
             </BonusBox>
@@ -392,12 +395,15 @@ export default function Home() {
               <Image alt="bonus" src={Bonus3} quality={100} />
               <BonusText>
                 <h3>
-                  DETOX <span style={{ color: '#bdd074' }}>ZERO ACNE</span>
+                  <u>DETOX</u>{' '}
+                  <span style={{ color: '#bdd074' }}>
+                    <u>ZERO ACNE</u>
+                  </span>
                 </h3>
                 <p>
-                  Transforme sua pele com os poderes desintoxicantes dos nossos
-                  sucos detox. Com ingredientes naturais perfeitos para retirar
-                  as toxinas causadoras da acne no seu organismo.
+                  Transforme sua pele com os <b>poderes desintoxicantes</b> dos
+                  nossos sucos detox. Com ingredientes naturais perfeitos para{' '}
+                  <b>retirar as toxinas</b> causadoras da acne no seu organismo.
                 </p>
               </BonusText>
             </BonusBox>
@@ -407,12 +413,15 @@ export default function Home() {
               <Image alt="bonus" src={Bonus4} quality={100} />
               <BonusText>
                 <h3>
-                  6 MÁSCARAS <span style={{ color: '#bdd074' }}>ANTI ACNE</span>
+                  <u>6 MÁSCARAS</u>{' '}
+                  <span style={{ color: '#bdd074' }}>
+                    <u>ANTI ACNE</u>
+                  </span>
                 </h3>
                 <p>
-                  Aprenda a receita de 6 máscaras naturais para tratar da
-                  inflamação da sua pele rapidamente. Cada máscara só precisa de
-                  2 ingredientes que você tem em casa.
+                  Aprenda a <b>receita de 6 máscaras naturais</b> para tratar da
+                  inflamação da sua pele rapidamente. Cada máscara{' '}
+                  <b>só precisa de 2 ingredientes</b> que você tem em casa.
                 </p>
               </BonusText>
             </BonusBox>
@@ -420,11 +429,14 @@ export default function Home() {
               <Image alt="bonus" src={Bonus2} quality={100} />
               <BonusText>
                 <h3>
-                  GRUPO <span style={{ color: '#bdd074' }}>VIP</span>
+                  <u>GRUPO</u>{' '}
+                  <span style={{ color: '#bdd074' }}>
+                    <u>VIP</u>
+                  </span>
                 </h3>
                 <p>
-                  Toda a ajuda e motivação que você precisa para se manter
-                  focado(a) no seu objetivo.
+                  <b>Toda a ajuda e motivação</b> que você precisa para se
+                  manter focado(a) no seu objetivo.
                 </p>
               </BonusText>
             </BonusBox>

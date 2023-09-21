@@ -11,6 +11,7 @@ export const ButtonContainer = styled('a', {
     border: 0,
     padding: '1rem 4rem',
     transition: 'all 300ms ease-in-out',
+    fontWeight: 'bold',
 
     '@media (max-width: 768px)': {
       fontSize: '.8rem',

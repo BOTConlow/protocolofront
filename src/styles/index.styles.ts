@@ -200,7 +200,7 @@ export const DepoimentosContent = styled('div', {
 
   button: {
     '@media (max-width: 768px)': {
-      fontSize: '.73rem',
+      fontSize: '.7rem',
     },
   },
 })

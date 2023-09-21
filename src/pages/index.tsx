@@ -60,6 +60,7 @@ import Image from 'next/image'
 import Faq from '@/components/faq'
 import { ChatsCircle, Star } from 'phosphor-react'
 import BuyButton from '@/components/buyButton'
+import CapturaLead from '@/components/capturaLead'
 
 const Vietnam = Montserrat({
   subsets: ['latin'],
@@ -168,6 +169,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <MainContainer className={Vietnam.className}>
+        <CapturaLead />
         <TopContainer id="homeSection">
           <FirstImg />
           <ScndImg />
@@ -201,6 +203,7 @@ export default function Home() {
             <BuyButton title="CLIQUE AQUI PARA ACABAR COM AS ESPINHAS!" />
           </TopBox>
         </TopContainer>
+
         <Comentarios />
         <ColoredContainer id="depoimentosSection">
           <DepoimentosContent>

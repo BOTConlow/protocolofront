@@ -240,7 +240,7 @@ export default function Home() {
                 ))}
               </Slider>
             </DepoimentosImg>
-            {timeLead && (
+            {timePage && (
               <div
                 style={{
                   width: '100%',
@@ -318,7 +318,7 @@ export default function Home() {
             <Ball type={'thrd'} />
             <Image alt="iphone" src={Iphone} quality={100} />
           </BeneficiosContent>
-          {timeLead && (
+          {timePage && (
             <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
           )}
         </BeneficiosContainer>

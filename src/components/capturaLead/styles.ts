@@ -1,4 +1,16 @@
 import { styled } from '../../styles/stitches.config'
+import { keyframes } from '@stitches/react'
+
+export const openAnim = keyframes({
+  '0%': {
+    left: '-5rem',
+    opacity: 0,
+  },
+  '100%': {
+    left: '50%',
+    opacity: 1,
+  },
+})
 
 export const UsuarioContainer = styled('form', {
   width: '30rem',
@@ -16,6 +28,7 @@ export const UsuarioContainer = styled('form', {
 
   position: 'fixed',
   bottom: '2rem',
+  animation: `${openAnim} 300ms ease`,
 
   left: '50%',
   transform: 'translateX(-50%)',

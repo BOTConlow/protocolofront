@@ -5,7 +5,7 @@ export const HeaderContent = styled('div', {
   top: 0,
   left: 0,
   width: '100vw',
-  height: '3rem',
+  height: '4rem',
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
@@ -13,6 +13,10 @@ export const HeaderContent = styled('div', {
   boxShadow: '1px 0px 15px 5px #00000035',
   zIndex: 1000,
   transition: '300ms ease',
+
+  '@media (max-width: 768px)': {
+    height: '3rem',
+  },
 
   img: {
     '@media (max-width: 768px)': {

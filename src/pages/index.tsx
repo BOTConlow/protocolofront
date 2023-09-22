@@ -61,6 +61,7 @@ import Faq from '@/components/faq'
 import { ChatsCircle, Star } from 'phosphor-react'
 import BuyButton from '@/components/buyButton'
 import CapturaLead from '@/components/capturaLead'
+import { useEffect, useState } from 'react'
 
 const Vietnam = Montserrat({
   subsets: ['latin'],
@@ -68,6 +69,21 @@ const Vietnam = Montserrat({
 })
 
 export default function Home() {
+  const [timePage, setTimePage] = useState(false)
+  const [timeLead, setTimeLead] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimePage(true)
+    }, 1320000)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLead(true)
+    }, 1440000)
+  }, [])
+
   const settings = {
     dots: true,
     infinite: true,
@@ -169,7 +185,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <MainContainer className={Vietnam.className}>
-        <CapturaLead />
+        {timeLead && <CapturaLead />}
         <TopContainer id="homeSection">
           <FirstImg />
           <ScndImg />
@@ -200,7 +216,11 @@ export default function Home() {
               Assista este curto vídeo para descobrir como acabar com as
               espinhas em até 17 dias!
             </h4>
-            <BuyButton title="CLIQUE AQUI PARA ACABAR COM AS ESPINHAS!" />
+            {timePage && (
+              <>
+                <BuyButton title="CLIQUE AQUI PARA ACABAR COM AS ESPINHAS!" />
+              </>
+            )}
           </TopBox>
         </TopContainer>
 
@@ -220,17 +240,19 @@ export default function Home() {
                 ))}
               </Slider>
             </DepoimentosImg>
-            <div
-              style={{
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: '1rem',
-              }}
-            >
-              <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
-            </div>
+            {timeLead && (
+              <div
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginTop: '1rem',
+                }}
+              >
+                <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
+              </div>
+            )}
           </DepoimentosContent>
         </ColoredContainer>
         <BeneficiosContainer id="beneficiosSection">
@@ -296,209 +318,218 @@ export default function Home() {
             <Ball type={'thrd'} />
             <Image alt="iphone" src={Iphone} quality={100} />
           </BeneficiosContent>
-          <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
+          {timeLead && (
+            <BuyButton title="CLIQUE AQUI PARA SE LIVRAR DAS ESPINHAS!" />
+          )}
         </BeneficiosContainer>
-        <BackgroundContainer>
-          <BackgroundContent background={'first'} />
-        </BackgroundContainer>
-        <ColoredContainer>
-          <GarantiaContent>
-            <GarantiaText>
+
+        {timePage && (
+          <>
+            <BackgroundContainer>
+              <BackgroundContent background={'first'} />
+            </BackgroundContainer>
+            <ColoredContainer>
+              <GarantiaContent>
+                <GarantiaText>
+                  <h1>
+                    <u>DESAFIO 17 DIAS</u>{' '}
+                    <span style={{ color: '#bdd074' }}>COM O PPP</span>
+                  </h1>
+                  <p>
+                    <b>Te desafiamos</b> a testar nosso protocolo por 17 dias, e
+                    caso não tenha resultados visíveis nesse período, devolvemos{' '}
+                    <b>100% do seu dinheiro</b> sem perguntas e sem burocracias!
+                  </p>
+                  <p>
+                    Além disso, temos um <b>suporte 24 horas</b> para te ajudar
+                    com qualquer problema que possa surgir!
+                  </p>
+                  <p>
+                    <b>
+                      VOCÊ TERA 17 DIAS APÓS A COMPRA PARA DEVOLUÇÃO, SEU RISCO
+                      POR TENTAR É ZERO!
+                    </b>
+                  </p>
+                  <BuyButton title="QUERO PARTICIPAR DO DESAFIO!" />
+                </GarantiaText>
+                <Image
+                  alt="selo garantia"
+                  src={Garantia}
+                  quality={100}
+                  width={215}
+                  height={295}
+                />
+              </GarantiaContent>
+            </ColoredContainer>
+            <DermatoContainer>
+              <DermatoText>
+                <h1>
+                  CONHEÇA SUA
+                  <br /> DERMATOLOGISTA
+                </h1>
+                <h3>
+                  <span style={{ color: '#bdd074' }}>Dra. KARINA COSTA</span>
+                </h3>
+                <p>
+                  Dermatologista e Criadora do Protoclo Pele Perfeita, Membro da
+                  Sociedade Brasileira de Dermatologia, com anos de experiência
+                  e especializações em Longevidade Saudável, Fitoterapia e
+                  peptídeos anti-acnes, a Doutora Karina Costa é considerada uma
+                  das melhores do Brasil na luta contra as acnes.
+                </p>
+                <p>
+                  "Eu desenvolvi o Protocolo Pele Perfeita com objetivo
+                  principal de ajudar as pessoas. Confie na minha experiência e
+                  especialização e experimente o Protocolo Pele Perfeita. Sua
+                  pele merece o melhor, e essa é a solução definitiva para
+                  isso."
+                </p>
+              </DermatoText>
+              <DermatoImg>
+                <Image
+                  alt="karina costa"
+                  src={Dermato}
+                  quality={100}
+                  width={386}
+                  height={538}
+                />
+
+                <Ball type={'thrd'} />
+              </DermatoImg>
+            </DermatoContainer>
+            <BackgroundContainer>
+              <BackgroundContent background={'scdn'} />
+            </BackgroundContainer>
+            <BonusContainer>
               <h1>
-                <u>DESAFIO 17 DIAS</u>{' '}
-                <span style={{ color: '#bdd074' }}>COM O PPP</span>
+                RECEBA NOSSOS 4 TOP VENDAS{' '}
+                <span style={{ color: '#bdd074' }}>COMO BÔNUS!</span>
               </h1>
-              <p>
-                <b>Te desafiamos</b> a testar nosso protocolo por 17 dias, e
-                caso não tenha resultados visíveis nesse período, devolvemos{' '}
-                <b>100% do seu dinheiro</b> sem perguntas e sem burocracias!
-              </p>
-              <p>
-                Além disso, temos um <b>suporte 24 horas</b> para te ajudar com
-                qualquer problema que possa surgir!
-              </p>
-              <p>
-                <b>
-                  VOCÊ TERA 17 DIAS APÓS A COMPRA PARA DEVOLUÇÃO, SEU RISCO POR
-                  TENTAR É ZERO!
-                </b>
-              </p>
-              <BuyButton title="QUERO PARTICIPAR DO DESAFIO!" />
-            </GarantiaText>
-            <Image
-              alt="selo garantia"
-              src={Garantia}
-              quality={100}
-              width={215}
-              height={295}
-            />
-          </GarantiaContent>
-        </ColoredContainer>
-        <DermatoContainer>
-          <DermatoText>
-            <h1>
-              CONHEÇA SUA
-              <br /> DERMATOLOGISTA
-            </h1>
-            <h3>
-              <span style={{ color: '#bdd074' }}>Dra. KARINA COSTA</span>
-            </h3>
-            <p>
-              Dermatologista e Criadora do Protoclo Pele Perfeita, Membro da
-              Sociedade Brasileira de Dermatologia, com anos de experiência e
-              especializações em Longevidade Saudável, Fitoterapia e peptídeos
-              anti-acnes, a Doutora Karina Costa é considerada uma das melhores
-              do Brasil na luta contra as acnes.
-            </p>
-            <p>
-              "Eu desenvolvi o Protocolo Pele Perfeita com objetivo principal de
-              ajudar as pessoas. Confie na minha experiência e especialização e
-              experimente o Protocolo Pele Perfeita. Sua pele merece o melhor, e
-              essa é a solução definitiva para isso."
-            </p>
-          </DermatoText>
-          <DermatoImg>
-            <Image
-              alt="karina costa"
-              src={Dermato}
-              quality={100}
-              width={386}
-              height={538}
-            />
+              <BonusContent>
+                <BonusBox>
+                  <Image alt="bonus" src={Bonus1} quality={100} />
+                  <BonusText>
+                    <h3>
+                      <u>GUIA</u>{' '}
+                      <span style={{ color: '#bdd074' }}>
+                        <u>PELE SAUDÁVEL</u>
+                      </span>
+                    </h3>
+                    <p>
+                      Descubra os <b>pequenos ajustes</b> que devem ser feitos
+                      no dia a dia para ter uma alimentação anti-acne{' '}
+                      <b>sem precisar abrir mão</b> dos alimentos que você ama.
+                    </p>
+                  </BonusText>
+                </BonusBox>
+                <BonusBox>
+                  <Image alt="bonus" src={Bonus3} quality={100} />
+                  <BonusText>
+                    <h3>
+                      <u>DETOX</u>{' '}
+                      <span style={{ color: '#bdd074' }}>
+                        <u>ZERO ACNE</u>
+                      </span>
+                    </h3>
+                    <p>
+                      Transforme sua pele com os <b>poderes desintoxicantes</b>{' '}
+                      dos nossos sucos detox. Com ingredientes naturais
+                      perfeitos para <b>retirar as toxinas</b> causadoras da
+                      acne no seu organismo.
+                    </p>
+                  </BonusText>
+                </BonusBox>
+              </BonusContent>
+              <BonusContent>
+                <BonusBox>
+                  <Image alt="bonus" src={Bonus4} quality={100} />
+                  <BonusText>
+                    <h3>
+                      <u>6 MÁSCARAS</u>{' '}
+                      <span style={{ color: '#bdd074' }}>
+                        <u>ANTI ACNE</u>
+                      </span>
+                    </h3>
+                    <p>
+                      Aprenda a <b>receita de 6 máscaras naturais</b> para
+                      tratar da inflamação da sua pele rapidamente. Cada máscara{' '}
+                      <b>só precisa de 2 ingredientes</b> que você tem em casa.
+                    </p>
+                  </BonusText>
+                </BonusBox>
+                <BonusBox>
+                  <Image alt="bonus" src={Bonus2} quality={100} />
+                  <BonusText>
+                    <h3>
+                      <u>GRUPO</u>{' '}
+                      <span style={{ color: '#bdd074' }}>
+                        <u>VIP</u>
+                      </span>
+                    </h3>
+                    <p>
+                      <b>Toda a ajuda e motivação</b> que você precisa para se
+                      manter focado(a) no seu objetivo.
+                    </p>
+                  </BonusText>
+                </BonusBox>
+              </BonusContent>
+              <BuyButton title="QUERO TER ACESSO A ESSE CONTEÚDO!" />
+            </BonusContainer>
+            <ColoredContainer>
+              <VipContainer>
+                <h1>INTERAÇÃO E MOTIVAÇÃO NO GRUPO VIP</h1>
 
-            <Ball type={'thrd'} />
-          </DermatoImg>
-        </DermatoContainer>
-        <BackgroundContainer>
-          <BackgroundContent background={'scdn'} />
-        </BackgroundContainer>
-        <BonusContainer>
-          <h1>
-            RECEBA NOSSOS 4 TOP VENDAS{' '}
-            <span style={{ color: '#bdd074' }}>COMO BÔNUS!</span>
-          </h1>
-          <BonusContent>
-            <BonusBox>
-              <Image alt="bonus" src={Bonus1} quality={100} />
-              <BonusText>
-                <h3>
-                  <u>GUIA</u>{' '}
-                  <span style={{ color: '#bdd074' }}>
-                    <u>PELE SAUDÁVEL</u>
-                  </span>
-                </h3>
-                <p>
-                  Descubra os <b>pequenos ajustes</b> que devem ser feitos no
-                  dia a dia para ter uma alimentação anti-acne{' '}
-                  <b>sem precisar abrir mão</b> dos alimentos que você ama.
-                </p>
-              </BonusText>
-            </BonusBox>
-            <BonusBox>
-              <Image alt="bonus" src={Bonus3} quality={100} />
-              <BonusText>
-                <h3>
-                  <u>DETOX</u>{' '}
-                  <span style={{ color: '#bdd074' }}>
-                    <u>ZERO ACNE</u>
-                  </span>
-                </h3>
-                <p>
-                  Transforme sua pele com os <b>poderes desintoxicantes</b> dos
-                  nossos sucos detox. Com ingredientes naturais perfeitos para{' '}
-                  <b>retirar as toxinas</b> causadoras da acne no seu organismo.
-                </p>
-              </BonusText>
-            </BonusBox>
-          </BonusContent>
-          <BonusContent>
-            <BonusBox>
-              <Image alt="bonus" src={Bonus4} quality={100} />
-              <BonusText>
-                <h3>
-                  <u>6 MÁSCARAS</u>{' '}
-                  <span style={{ color: '#bdd074' }}>
-                    <u>ANTI ACNE</u>
-                  </span>
-                </h3>
-                <p>
-                  Aprenda a <b>receita de 6 máscaras naturais</b> para tratar da
-                  inflamação da sua pele rapidamente. Cada máscara{' '}
-                  <b>só precisa de 2 ingredientes</b> que você tem em casa.
-                </p>
-              </BonusText>
-            </BonusBox>
-            <BonusBox>
-              <Image alt="bonus" src={Bonus2} quality={100} />
-              <BonusText>
-                <h3>
-                  <u>GRUPO</u>{' '}
-                  <span style={{ color: '#bdd074' }}>
-                    <u>VIP</u>
-                  </span>
-                </h3>
-                <p>
-                  <b>Toda a ajuda e motivação</b> que você precisa para se
-                  manter focado(a) no seu objetivo.
-                </p>
-              </BonusText>
-            </BonusBox>
-          </BonusContent>
-          <BuyButton title="QUERO TER ACESSO A ESSE CONTEÚDO!" />
-        </BonusContainer>
-        <ColoredContainer>
-          <VipContainer>
-            <h1>INTERAÇÃO E MOTIVAÇÃO NO GRUPO VIP</h1>
-
-            <VipContent>
-              <VipText>
-                {grupovip.map((item) => (
-                  <div
-                    key={item.title}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      flexDirection: 'column',
-                      textAlign: 'center',
-                      gap: '1.5rem',
-                    }}
-                  >
-                    <div>
-                      {item.icon === 'icone1' ? (
-                        <Star size={90} weight="duotone" color="#bdd074" />
-                      ) : item.icon === 'icone2' ? (
-                        <ChatsCircle
-                          size={90}
-                          weight="duotone"
-                          color="#bdd074"
-                        />
-                      ) : (
-                        ''
-                      )}
-                    </div>
-                    <div>
-                      <h2>{item.title}</h2>
-                      <p>{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </VipText>
-              <Image
-                alt="bonus"
-                src={GrupoImg}
-                quality={100}
-                width={460}
-                height={289}
-              />
-            </VipContent>
-          </VipContainer>
-        </ColoredContainer>
-        <FaqContainer>
-          <h1>
-            PERGUNTAS <span style={{ color: '#bdd074' }}>FREQUENTES</span>
-          </h1>
-          <Faq />
-        </FaqContainer>
+                <VipContent>
+                  <VipText>
+                    {grupovip.map((item) => (
+                      <div
+                        key={item.title}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          flexDirection: 'column',
+                          textAlign: 'center',
+                          gap: '1.5rem',
+                        }}
+                      >
+                        <div>
+                          {item.icon === 'icone1' ? (
+                            <Star size={90} weight="duotone" color="#bdd074" />
+                          ) : item.icon === 'icone2' ? (
+                            <ChatsCircle
+                              size={90}
+                              weight="duotone"
+                              color="#bdd074"
+                            />
+                          ) : (
+                            ''
+                          )}
+                        </div>
+                        <div>
+                          <h2>{item.title}</h2>
+                          <p>{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </VipText>
+                  <Image
+                    alt="bonus"
+                    src={GrupoImg}
+                    quality={100}
+                    width={460}
+                    height={289}
+                  />
+                </VipContent>
+              </VipContainer>
+            </ColoredContainer>
+            <FaqContainer>
+              <h1>
+                PERGUNTAS <span style={{ color: '#bdd074' }}>FREQUENTES</span>
+              </h1>
+              <Faq />
+            </FaqContainer>
+          </>
+        )}
       </MainContainer>
     </>
   )

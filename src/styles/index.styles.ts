@@ -534,7 +534,7 @@ export const BonusContainer = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   padding: '4rem 0',
-  gap: '2rem',
+  gap: '4rem',
   textAlign: 'center',
 
   '@media (max-width: 768px)': {
@@ -543,13 +543,15 @@ export const BonusContainer = styled('div', {
   },
 
   h1: {
-    marginBottom: '1.5rem',
+    fontSize: '2.3rem',
 
     '@media (max-width: 768px)': {
       fontSize: '1.7rem',
       marginBottom: '0',
     },
   },
+
+  button: {},
 })
 
 export const BonusContent = styled('div', {
@@ -604,11 +606,12 @@ export const VipContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: '2rem',
+  gap: '3rem',
 
   h1: {
     color: '#ffff',
     textAlign: 'center',
+    fontSize: '2.3rem',
 
     '@media (max-width: 768px)': {
       fontSize: '1.5rem',

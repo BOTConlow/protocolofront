@@ -26,7 +26,7 @@ export const TopContainer = styled('div', {
   background: '#bdd074',
 
   '@media (max-width: 768px)': {
-    height: '50rem',
+    height: '47rem',
   },
 })
 
@@ -246,11 +246,12 @@ export const BeneficiosContainer = styled('div', {
   padding: '4.5rem 0 4.5rem',
 
   h1: {
-    fontSize: '2.5em',
+    fontSize: '2.5rem',
     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.20);',
 
     '@media (max-width: 768px)': {
       textAlign: 'center',
+      fontSize: '2rem',
     },
   },
 
@@ -540,6 +541,7 @@ export const BonusContainer = styled('div', {
   '@media (max-width: 768px)': {
     maxWidth: '100%',
     padding: '2rem 1rem',
+    gap: '2em',
   },
 
   h1: {

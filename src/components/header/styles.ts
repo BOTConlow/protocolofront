@@ -15,7 +15,8 @@ export const HeaderContent = styled('div', {
   transition: '300ms ease',
 
   '@media (max-width: 768px)': {
-    height: '3rem',
+    height: '3.5rem',
+    position: 'absolute',
   },
 
   img: {

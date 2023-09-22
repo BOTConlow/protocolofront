@@ -1,18 +1,11 @@
 import { styled } from '../../styles/stitches.config'
 
-export const HeaderContainer = styled('header', {
-  height: '4rem',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-})
-
 export const HeaderContent = styled('div', {
   position: 'fixed',
   top: 0,
   left: 0,
   width: '100vw',
-  height: '4rem',
+  height: '3rem',
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
@@ -20,6 +13,13 @@ export const HeaderContent = styled('div', {
   boxShadow: '1px 0px 15px 5px #00000035',
   zIndex: 1000,
   transition: '300ms ease',
+
+  img: {
+    '@media (max-width: 768px)': {
+      width: 90,
+      height: 90,
+    },
+  },
 
   variants: {
     variant: {
@@ -60,6 +60,11 @@ export const Picture = styled('div', {
   img: {
     borderRadius: '100%',
     cursor: 'pointer',
+
+    '@media (max-width: 768px)': {
+      width: '35px!important',
+      height: '35px!important',
+    },
   },
 })
 
@@ -121,6 +126,10 @@ export const Login = styled('div', {
     borderRadius: 20,
     padding: '.5rem 1.5rem',
     transition: '100ms linear',
+
+    '@media (max-width: 768px)': {
+      fontSize: '.8rem',
+    },
 
     '&:hover': {
       background: 'linear-gradient(90deg, #2e4a20, #508038)',

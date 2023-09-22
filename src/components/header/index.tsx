@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import {
   Atalhos,
-  HeaderContainer,
   HeaderContent,
   Login,
   Menu,
@@ -63,59 +62,58 @@ export default function Header() {
   }, [])
 
   return (
-    <HeaderContainer ref={headerRef}>
-      <HeaderContent variant={hasScrolled ? 'colored' : 'default'}>
-        <a href="/">
+    <HeaderContent
+      variant={hasScrolled ? 'colored' : 'default'}
+      ref={headerRef}
+    >
+      <a href="/">
+        <Image
+          src={Logo}
+          alt="Logo"
+          quality={100}
+          priority={true}
+          width={105}
+          height={105}
+        />
+      </a>
+      <Atalhos>
+        <h4 onClick={() => scrollToSection('homeSection')}>HOME</h4>
+        <h4 onClick={() => scrollToSection('chatSection')}>CHAT ONLINE</h4>
+        <h4 onClick={() => scrollToSection('depoimentosSection')}>
+          DEPOIMENTOS
+        </h4>
+        <h4 onClick={() => scrollToSection('beneficiosSection')}>BENEFÍCIOS</h4>
+      </Atalhos>
+
+      <Picture>
+        {user ? (
           <Image
-            src={Logo}
+            onClick={abrirMenu}
+            src={Avatar}
             alt="Logo"
             quality={100}
             priority={true}
-            width={105}
-            height={105}
+            width={48}
+            height={48}
           />
-        </a>
-        <Atalhos>
-          <h4 onClick={() => scrollToSection('homeSection')}>HOME</h4>
-          <h4 onClick={() => scrollToSection('chatSection')}>CHAT ONLINE</h4>
-          <h4 onClick={() => scrollToSection('depoimentosSection')}>
-            DEPOIMENTOS
-          </h4>
-          <h4 onClick={() => scrollToSection('beneficiosSection')}>
-            BENEFÍCIOS
-          </h4>
-        </Atalhos>
-
-        <Picture>
-          {user ? (
-            <Image
-              onClick={abrirMenu}
-              src={Avatar}
-              alt="Logo"
-              quality={100}
-              priority={true}
-              width={48}
-              height={48}
-            />
-          ) : (
-            <Login>
-              <a href="/login">Login</a>
-            </Login>
-          )}
-          {menu && (
-            <Menu>
-              <a href="/minhaconta">
-                <MenuItem>
-                  {' '}
-                  <User size={32} />
-                  Minha conta
-                </MenuItem>
-              </a>
-              <button onClick={handleSignOut}>Sair</button>
-            </Menu>
-          )}
-        </Picture>
-      </HeaderContent>
-    </HeaderContainer>
+        ) : (
+          <Login>
+            <a href="/login">Login</a>
+          </Login>
+        )}
+        {menu && (
+          <Menu>
+            <a href="/minhaconta">
+              <MenuItem>
+                {' '}
+                <User size={32} />
+                Minha conta
+              </MenuItem>
+            </a>
+            <button onClick={handleSignOut}>Sair</button>
+          </Menu>
+        )}
+      </Picture>
+    </HeaderContent>
   )
 }

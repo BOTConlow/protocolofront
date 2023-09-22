@@ -246,7 +246,7 @@ export const BeneficiosContainer = styled('div', {
   padding: '4.5rem 0 4.5rem',
 
   h1: {
-    fontSize: '1.8rem',
+    fontSize: '2.5em',
     textShadow: '1px 1px 2px rgba(0, 0, 0, 0.20);',
 
     '@media (max-width: 768px)': {

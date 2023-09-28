@@ -256,7 +256,7 @@ export const BeneficiosContainer = styled('div', {
   },
 
   '@media (max-width: 768px)': {
-    maxWidth: '95%',
+    maxWidth: '100%',
     padding: '3rem 1rem',
     gap: '2rem',
   },

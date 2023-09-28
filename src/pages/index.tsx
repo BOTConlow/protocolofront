@@ -75,13 +75,13 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setTimePage(true)
-    }, 1320000)
+    }, 1380000)
   }, [])
 
   useEffect(() => {
     setTimeout(() => {
       setTimeLead(true)
-    }, 1440000)
+    }, 1410000)
   }, [])
 
   const settings = {

@@ -75,7 +75,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setTimePage(true)
-    }, 1380000)
+    }, 5000)
   }, [])
 
   useEffect(() => {
